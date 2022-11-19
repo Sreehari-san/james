@@ -129,9 +129,9 @@
           }
           .more p {
                margin-top: 5px;
-               margin-left: 10px;
                color: rgb(212, 212, 212);
                letter-spacing: 1px;
+               text-align: center;
           }
           .likes p {
                margin-top: 5px;
@@ -162,22 +162,30 @@
           #contact {
                margin-left: auto;
           }
+          #contactDev:hover {
+               color: green;
+          }
           #contactDev {
                margin-left: 10px;
                margin-right: 10px;
+               background: none;
+               border: none;
+               color: white;
+               font-size: 16px;
+               cursor: pointer;
           }
           .landing {
                height: 100vh;
           }
      </style>
 </head>
-<body>
+<body id="body">
      <div class="landing">
           <header>
                <div class="header" id="header">
-                    <h2>James</h2>
+                    <h2 id="heading">James</h2>
                     <a href="https://www.instagram.com/james.offical2306/" id="contact">Contact</a>
-                    <a href="https://sreehari-san.github.io/SS"  id="contactDev">Contact Dev</a>             
+                    <button onclick="changeTheme()" id="contactDev">Change Theme</button>            
                </div>
           </header>
           <h1 class="intro">Hello, <br>I'm James</h1>
@@ -212,6 +220,7 @@
      <br><br><hr><br><br>
      <footer>
           <div class="footer">
+               <br>
                <a style="text-align: center; color: rgb(0, 132, 255); text-decoration: none;" href="https://sreehari-san.github.io/SS">WebDesign By Sreehari</a>
           </div>
           <br>
@@ -222,14 +231,69 @@
      </footer>
      <!--Script-->
      <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+     <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
      <script>
           //AnimateOnScroll
           AOS.init();
           AOS.refresh();
           //Other
-          function playRob() {
-               window.open("https://www.roblox.com/games/4924922222/Brookhaven-RP?gameSearchSessionInfo=fcabc8d8-3a7f-4c9b-91b9-46e26555f047&isAd=false&nativeAdData=&numberOfLoadedTiles=40&page=searchPage&placeId=4924922222&position=0&universeId=1686885941")
-          }
+          $(document).ready(function() {
+               $("#contactDev").click(function() {
+                    $("#body",).css({
+                         "background":"#dedede"
+                    })
+                    $(".header").css({
+                         "box-shadow":"1px 1px 10px #a2a3a2"
+                    })
+                    $("#heading").css({
+                         "color":"black",
+                    })
+                    $(".header a").css({
+                         "color":"black"
+                    })
+                    $(".header button").css({
+                         "color":"black"
+                    })
+                    $(".intro").css({
+                         "color":"black"
+                    })
+                    $("#des").css({
+                         "color":"grey"
+                    })
+                    $("#btn1").css({
+                         "background-color":"#2361cc",
+                         "box-shadow":"1px 1px 15px 3px #2361cc" 
+                    })
+                    $(".played").css({
+                         "box-shadow":"1px 1px 10px #a2a3a2"
+                    })
+                    $(".likes").css({
+                         "box-shadow":"1px 1px 10px #a2a3a2"
+                    })
+                    $(".more").css({
+                         "box-shadow":"1px 1px 10px #a2a3a2"
+                    })
+                    $(".played i").css({
+                         "color":"#2361cc"
+                    })
+                    $(".more i").css({
+                         "color":"#2361cc"
+                    })
+                    $(".likes i").css({
+                         "color":"#2361cc"
+                    })
+                    $(".played p").css({
+                         "color":"#111"
+                    })
+                    $(".likes p").css({
+                         "color":"#111"
+                    })
+                    $(".more p").css({
+                         "color":"#111"
+                    })
+                    
+               })
+          })
      </script>
 </body>
 </html>
