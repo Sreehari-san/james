@@ -13,7 +13,7 @@
           }
           body {
                background-color: #111;
-               font-family: Tahoma;
+               font-family: sans-serif;
           }
           .header {
                padding: 19px;
@@ -48,7 +48,7 @@
                font-weight: 400;
                letter-spacing: 3px;
                margin-left: 30px;
-               margin-top: 100px;
+               margin-top: 20vh;
                padding-top: 10px;
           }
           #des {
@@ -59,11 +59,11 @@
           .buttons {
                height: 100px;
                text-align: center;
-               padding-top: 30px;
+               margin-top: 20vh;
           }
           #btn1 {
-               width: 140px;
-               height: 45px;
+               width: 200px;
+               height: 50px;
                border: 1px white;
                background-color: rgb(13, 174, 4);
                border-radius: 10px;
@@ -166,23 +166,28 @@
                margin-left: 10px;
                margin-right: 10px;
           }
+          .landing {
+               height: 100vh;
+          }
      </style>
 </head>
 <body>
-     <header>
-          <div class="header" id="header">
-               <h2>James</h2>
-               <a href="https://www.instagram.com/james.offical2306/" id="contact">Contact</a>
-               <a href="https://sreehari-san.github.io/SS"  id="contactDev">Contact Dev</a>             
+     <div class="landing">
+          <header>
+               <div class="header" id="header">
+                    <h2>James</h2>
+                    <a href="https://www.instagram.com/james.offical2306/" id="contact">Contact</a>
+                    <a href="https://sreehari-san.github.io/SS"  id="contactDev">Contact Dev</a>             
+               </div>
+          </header>
+          <h1 class="intro">Hello, <br>I'm James</h1>
+          <p id="des">Game developer in roblox</p>
+          <br>
+          <div class="buttons">
+               <button id="btn1"><a href="https://www.roblox.com/users/3289659380/profile">Visit My Profile</a></button>
           </div>
-     </header>
-     <h1 class="intro">Hello, <br>I'm James</h1>
-     <p id="des">Game developer in roblox</p>
-     <br>
-     <div class="buttons">
-          <button id="btn1"><a href="https://www.roblox.com/games/4924922222/Brookhaven-RP?gameSearchSessionInfo=fcabc8d8-3a7f-4c9b-91b9-46e26555f047&isAd=false&nativeAdData=&numberOfLoadedTiles=40&page=searchPage&placeId=4924922222&position=0&universeId=1686885941">Play</a></button>
      </div>
-     <br>
+     <br><hr><br><br>
      <div class="played" data-aos="slide-right" data-aos-delay="100" data-aos-duration="3000">
           <i class="fa-solid fa-play" id="play-icon"></i>
           <p>Game Developer In Roblox</p>
